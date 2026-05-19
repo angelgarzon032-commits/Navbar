@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Navbar - Anatomía de Interfaz</title>
+</head>
+<body>
+
+    <!-- Navegación Principal -->
+    <nav class="cyber-nav">
+        <div class="logo">NAVBAR</div>
+        <ul>
+            <li><a href="#que-es">PROTOCOLOS</a></li>
+            <li><a href="#jerarquia">ESTRUCTURA</a></li>
+            <li><a href="#patrones">PATRONES</a></li>
+            <li><a href="#estados">ESTADOS</a></li>
+            <li><a href="#accesibilidad">ACCESIBILIDAD</a></li>
+            <li><a href="#ejemplos-tecnicos">EJEMPLOS</a></li>
+            <li><a href="#efectos">EFECTOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        <h1>ANATOMÍA DE UNA NAVBAR</h1>
+        <p>La barra de navegación es el nodo central de cualquier interfaz. En un entorno digital, su eficiencia determina la velocidad de transferencia del usuario.</p>
+        
+        <!-- Sección: ¿Qué es? -->
+        <section id="que-es" class="card">
+            <h2>¿Qué es?</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder"><img src="img/navbar.png" alt="Diagrama conceptual de la navbar"></div>
+                <div class="text-content">
+                    <p>Es un componente de UI que permite la navegación entre los distintos sectores de tu aplicación o sitio web. Debe ser responsiva y rápida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Jerarquía -->
+        <section id="jerarquia" class="card reverse">
+            <h2>Jerarquía de Elementos</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder"><img src="img/tipos.webp" alt="Visualización de la jerarquía"></div>
+                <div class="text-content">
+                    <p>Una navbar efectiva debe priorizar el flujo de datos. Se recomienda seguir este orden lógico:</p>
+                    <ul>
+                        <li><strong>Identidad (Logo):</strong> El punto de origen del usuario.</li>
+                        <li><strong>Navegación Principal:</strong> Enlaces directos a módulos críticos.</li>
+                        <li><strong>Acciones de Usuario:</strong> Botones de login, perfil o estado de sistema.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Patrones -->
+        <section id="patrones" class="card">
+            <h2>Patrones de Navegación</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder"><img src="img/patrones.png" alt="Patrones de diseño"></div>
+                <div class="text-content">
+                    <p>Dependiendo del volumen de información, se aplican distintos patrones estructurales:</p>
+                    <ul>
+                        <li><strong>Horizontal (Top Bar):</strong> Ideal para sitios con pocos enlaces principales.</li>
+                        <li><strong>Menú Hamburguesa (Drawer):</strong> Utilizado para colapsar opciones en vistas móviles.</li>
+                        <li><strong>Sticky Navigation:</strong> Mantiene la barra fija durante el scroll.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Estados -->
+        <section id="estados" class="card reverse">
+            <h2>Estados del Componente</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder"><img src="img/estados.jpg" alt="Estados del componente"></div>
+                <div class="text-content">
+                    <p>Una navbar funcional debe comunicar estados claros al usuario:</p>
+                    <ul>
+                        <li><strong>Default:</strong> Estado inicial sin interacción.</li>
+                        <li><strong>Hover/Active:</strong> Cambio visual al interactuar.</li>
+                        <li><strong>Disabled:</strong> Módulos restringidos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Accesibilidad -->
+        <section id="accesibilidad" class="card">
+            <h2>Accesibilidad y Semántica</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder"><img src="img/accebilidad.png" alt="Conceptos de accesibilidad"></div>
+                <div class="text-content">
+                    <p>Un sistema robusto debe ser interpretable por cualquier agente de usuario:</p>
+                    <ul>
+                        <li><strong>Uso de ARIA:</strong> Implementar <code>aria-label</code>.</li>
+                        <li><strong>Navegación por Teclado:</strong> Accesibilidad mediante Tab.</li>
+                        <li><strong>Contraste:</strong> Legibilidad absoluta.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Ejemplos Técnicos -->
+        <section id="ejemplos-tecnicos" class="card reverse">
+            <h2>Ejemplos Funcionales</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder"><img src="img/ejemplos.jpg" alt="Ejemplos técnicos"></div>
+                <div class="text-content">
+                    <h3>1. Menú Desplegable (Dropdown)</h3>
+                    <div class="dropdown">
+                        <button class="dropbtn">ACCEDER A MÓDULOS ▾</button>
+                        <div class="dropdown-content">
+                            <a href="#que-es">PROTOCOLOS</a>
+                            <a href="#jerarquia">ESTRUCTURA</a>
+                            <a href="#patrones">PATRONES</a>
+                        </div>
+                    </div>
+                    <h3>2. Botón de Estado del Sistema</h3>
+                    <div class="status-indicator">
+                        <button id="toggleStatus" onclick="cambiarEstado()">STATUS: ONLINE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Efectos Visuales -->
+        <section id="efectos" class="card">
+            <h2>Efectos Visuales y Feedback</h2>
+            <div class="content-wrapper">
+                <div class="img-placeholder">
+                    <video src="img/vecteezy_flat-search-bar-template-2d-4k-green-screen-animation_16472488.mp4" autoplay loop muted playsinline alt="Efecto visual"></video>
+                </div>
+                <div class="text-content">
+                    <p>El feedback visual es vital para informar sobre la interactividad del componente sin sacrificar el rendimiento.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scroll para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Alternar estado visual y texto del botón
+        function cambiarEstado() {
+            const btn = document.getElementById('toggleStatus');
+            if (btn.innerText === "STATUS: ONLINE") {
+                btn.innerText = "STATUS: OFFLINE";
+                btn.style.borderColor = "red";
+            } else {
+                btn.innerText = "STATUS: ONLINE";
+                btn.style.borderColor = "cyan";
+            }
+        }
+    </script>
+</body>
+</html>

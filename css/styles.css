@@ -1,0 +1,168 @@
+/* --- Variables Globales --- */
+:root {
+    --neon-cyan: #0ff;
+    --neon-pink: #f0f;
+    --bg-dark: #0a0b10;
+    --text-white: #fff;
+}
+
+/* --- Reset y Estilos Base --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Navbar (Estilo Cyberpunk) --- */
+.cyber-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 2px solid var(--neon-cyan);
+    background: rgba(10, 11, 16, 0.9);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.logo {
+    color: var(--neon-cyan);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.cyber-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.cyber-nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.cyber-nav a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* --- Tarjetas (Cards) y Layout --- */
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid var(--neon-pink);
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), transparent);
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.card.reverse .content-wrapper {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+/* --- Contenedor de Imágenes y Video --- */
+.img-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+    border: 2px solid var(--neon-cyan);
+    padding: 5px;
+}
+
+.img-placeholder img, 
+.img-placeholder video {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(0.5) hue-rotate(150deg);
+}
+
+.img-placeholder video {
+    object-fit: fill;
+}
+
+/* --- Componentes Específicos --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #1a1a1a;
+    border: 1px solid var(--neon-cyan);
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+#toggleStatus {
+    background: transparent;
+    color: var(--text-white);
+    border: 2px solid var(--neon-cyan);
+    padding: 10px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+/* --- Responsive Design (Móviles) --- */
+@media (max-width: 768px) {
+    .cyber-nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cyber-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin: 20px 10px;
+    }
+
+    .content-wrapper, 
+    .card.reverse .content-wrapper {
+        flex-direction: column !important;
+    }
+
+    .img-placeholder {
+        width: 100%;
+        height: auto;
+    }
+}
